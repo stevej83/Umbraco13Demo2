@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35506.116 d17.12
+VisualStudioVersion = 17.12.35506.116
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UmbracoDotcraft", "UmbracoDotcraft.csproj", "{7D407F7A-4FFA-4EB2-8FD9-A492292869D7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UmbracoDotcraft.Tests", "..\UmbracoDotcraft.Tests\UmbracoDotcraft.Tests.csproj", "{45C7D503-22C7-4135-BA91-C4D1FD55F859}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{7D407F7A-4FFA-4EB2-8FD9-A492292869D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7D407F7A-4FFA-4EB2-8FD9-A492292869D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7D407F7A-4FFA-4EB2-8FD9-A492292869D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45C7D503-22C7-4135-BA91-C4D1FD55F859}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45C7D503-22C7-4135-BA91-C4D1FD55F859}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45C7D503-22C7-4135-BA91-C4D1FD55F859}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45C7D503-22C7-4135-BA91-C4D1FD55F859}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
