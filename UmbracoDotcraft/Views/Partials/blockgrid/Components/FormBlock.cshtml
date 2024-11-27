@@ -1,0 +1,58 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockGridItem>
+
+@{
+    var viewModel = Model.Content as FormBlock;
+}
+
+@* Use for navigation anchors only *@
+<a name="@viewModel?.BlockId"></a>
+
+<div class="container col-xxl-8 px-4 py-5">
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+        <!-- Form Block Image -->
+        <div class="col-10 col-sm-8 col-lg-6 formImage">
+            @if (viewModel?.Image != null)
+            {
+                <img src="@(viewModel.Image.GetCropUrl(width: 700, height: 628))"
+                     class="d-block mx-lg-auto img-fluid"
+                     alt="@(viewModel.Image.Name)"
+                     width="700"
+                     height="628"
+                     loading="lazy">
+            }
+        </div>
+
+        <!-- Form Block Text and Form -->
+        <div class="col-lg-6 formText">
+            <h1 class="display-5 fw-bold lh-1 mb-3">@viewModel?.Title</h1>
+            <p class="lead">@viewModel?.Description</p>
+
+            <form id="userForm">
+                <!-- Name Field -->
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" id="name" name="name" class="form-control" />
+                </div>
+
+                <!-- Email Field -->
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" id="email" name="email" class="form-control" />
+                </div>
+
+                <!-- Date of Birth Field -->
+                <div class="mb-3">
+                    <label for="dob" class="form-label">Date of Birth</label>
+                    <input type="date" id="dob" name="dob" class="form-control" />
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="btn btn-primary w-100" id="btnSubmit">Submit</button>
+            </form>
+
+            <!-- Error Message -->
+            <div id="errorMessage" class="text-danger mt-3">
+            </div>
+        </div>
+    </div>
+</div>

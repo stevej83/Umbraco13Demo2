@@ -1,0 +1,11 @@
+﻿/* break point for form block */
+@media only screen and (max-width: 992px) {
+
+    .formImage {
+        width: 100%;
+    }
+
+    .formText {
+        text-align: center;
+    }
+}

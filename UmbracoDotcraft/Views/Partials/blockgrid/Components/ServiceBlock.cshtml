@@ -1,0 +1,41 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockGridItem>
+
+@{
+    var viewModel = Model.Content as ServiceBlock;
+}
+
+@* Use for navigation anchors only. *@
+<a name="@viewModel?.BlockId"></a>
+
+<div class="container px-4 py-5">
+    @if (!string.IsNullOrEmpty(viewModel?.Title))
+    {
+        <h2 class="pb-2 text-center">@(viewModel.Title)</h2>
+    }
+    <div class="row g-4 py-5 row-cols-1 row-cols-lg-3 text-center">
+        @foreach (var item in viewModel?.Services)
+        {
+            var serviceItem = item.Content as ServiceItem;
+
+            <div class="col d-flex justify-content-center">
+                <div class="card" style="width: 100%;">
+                    @if (serviceItem?.Image != null)
+                    {
+                        <img src="@serviceItem.Image.GetCropUrl(width:600, height:600)" class="card-img-top" alt="@(serviceItem.Image.Name)">
+                    }
+
+                    <div class="card-body">
+                        @if (!string.IsNullOrEmpty(serviceItem?.Title))
+                        {
+                            <h5 class="card-title">@(serviceItem.Title)</h5>
+                        }
+                        @if (!string.IsNullOrEmpty(serviceItem?.Description))
+                        {
+                            <p class="card-text">@(serviceItem.Description)</p>
+                        }
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

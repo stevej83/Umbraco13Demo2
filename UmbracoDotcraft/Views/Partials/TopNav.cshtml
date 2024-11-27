@@ -1,0 +1,33 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+
+@{
+    var home = Model.AncestorOrSelf("homepage") as Homepage;
+}
+
+<div class="container">
+    <nav class="navbar navbar-expand-lg border-bottom">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                @if (home?.Logo != null)
+                {
+                    <img src="@(home.Logo.GetCropUrl(width: 60, height: 60))" alt="@(home.Logo.Name)" width="60" height="60">
+                }
+
+                @if (home?.LogoText != null)
+                {
+                    @(home.LogoText)
+                }
+            </a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    @foreach (var navLink in home.NavigationLinks)
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link" href="@navLink.Url">@navLink.Name</a>
+                        </li>
+                    }
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>

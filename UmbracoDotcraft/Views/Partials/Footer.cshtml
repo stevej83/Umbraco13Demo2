@@ -1,0 +1,16 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+
+@{
+    var home = Model.AncestorOrSelf("homepage") as Homepage;
+}
+
+<div class="container">
+    <footer class="py-3 my-4">
+        <p class="text-center text-body-secondary small">
+            @if (home?.Copyright != null)
+            {
+                @(home.Copyright)
+            }
+        </p>
+    </footer>
+</div>
