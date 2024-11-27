@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("UmbracoDotcraft.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f450991794b945b9cd7df8eab7b2757a3cb67b25")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f03eecf6702a5c6aec89ec186fef23136ffe2e42")]
 [assembly: System.Reflection.AssemblyProductAttribute("UmbracoDotcraft.Tests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("UmbracoDotcraft.Tests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
